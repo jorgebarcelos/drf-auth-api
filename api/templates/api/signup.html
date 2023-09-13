@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Signup Page</h1>
+
+
+    <form method="post" class="user-data" style="text-align: center;">{% csrf_token %}
+        <label for="fname">Nome de Usuário</label><br>
+        <hr>
+        <input type="text" name="username" id="username">
+        <br>
+        <label for="fname">Email</label><br>
+        <input type="email" name="email" id="email"><br>
+        <hr>
+        <label for="lname">Senha</label><br>
+        <input type="password" name="password" id="password"><br>
+        <hr>
+        <br>
+        <button type="submit" id="send">Cadastrar</button>
+    </form>
+
+
+</body>
+
+
+<script src="{% static "js/users.js" %}"></script>
+
+</html>
